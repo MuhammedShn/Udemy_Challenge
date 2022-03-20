@@ -7,6 +7,7 @@ SCREEN_SIZE = [725, 491]
 data = pandas.read_csv("50_states.csv")
 guessed_state = []
 
+
 screen = turtle.Screen()
 screen.title("US States Game")
 image = "blank_states_img.gif"
