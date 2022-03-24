@@ -22,9 +22,7 @@ while len(guessed_state) < 51:
 
     if answer == "Exit":
         state_to_learn = data["state"].to_list()
-        for guessed_state_name in guessed_state:
-            state_to_learn.remove(guessed_state_name)
-
+        state_to_learn = [states for states in state_to_learn if states not in guessed_state]
         state_to_learn = {"state": state_to_learn}
         data_frame = pandas.DataFrame(state_to_learn)
         data_frame.to_csv("state_to_learn.csv")
